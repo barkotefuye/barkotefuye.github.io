@@ -1,0 +1,16 @@
+{
+  "name": "driver-app-api",
+  "version": "1.0.0",
+  "description": "app for driver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Barkot Efuye",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.95.6",
+    "react": "^17.0.2",
+    "react-router-dom": "^5.2.0"
+  }
+}
