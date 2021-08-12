@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Nile Express</title>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/index.css">
+    <script src="../../assets/js/index.js"></script>
+  </head>
+  
+  <body>
+    <div class="d-flex">
+      <img class="ml-auto mr-auto mt-2" height="120px" width="227px" src="../../assets/img/logo.jpeg" />
+    </div>
+
+  <div class="d-flex mt-2 mb-4">
+    <div class="col-lg-7 col-10 ml-auto mr-auto bg-white">
+      <div class="pb-5 mt-4 border-bottom">
+        <h3 class="ml-4">Driver Verification</h3>
+        <p class="ml-4">The following information will be used to verify you as a driver </p>
+      </div>
+      <div class="container mt-3 mb-4">
+        <form class="form-group" action="/driver-experience" method ="POST">
+          <div class="p-3 appendFieldsContainer">
+            <p>Please list out all of the places you have lived in the past three years
+
+            </p>
+            <div class ="row">
+              <div class = "col-12">
+                <div>
+                  <div class="p-3">
+                    <p>Address <span class="text-danger font-weight-bold">*</span></p>
+                    <div class="row">
+                      <div class="col-12">
+                        <input class="form-control fieldsFocus" type="text" name = "currentAddress1" required>
+                        <span class="pt-2 text-muted font-sm">Street Address</span>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-12">
+                        <input class="form-control fieldsFocus" type="text" name = "currentAddress2">
+                        <span class="pt-2 text-muted font-sm">Street Address Line 2</span>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-lg-6 col-12">
+                        <input class="form-control fieldsFocus" type="text" name = "currentCity" required>
+                        <span class="pl-0 pt-2 text-sm text-muted font-sm">City</span>
+                      </div>
+                      <div class="col-lg-2 col-12">
+                        <input class="form-control ml-auto mr-5 fieldsFocus" type="text" maxlength = "2" name = "currentState" required>
+                        <span class="pt-2 text-muted font-sm" >State / Province</span>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <input class="form-control fieldsFocus" type="text" maxlength="10" name = "currentZipcode" required>
+                        <span class="pt-2 text-muted font-sm">Postal / Zip Code</span>
+                      </div>
+                    </div>
+                    <div class="row mt-3">
+                      <div class="col-lg-6 col-12">
+                        <input class="form-control fieldsFocus" type="date" name = "startDateAddress" required>
+                        <span class="pl-0 pt-2 text-sm text-muted font-sm">Start Date</span>
+                      </div>
+                      <div class="col-lg-6 col-12">
+                        <input class="form-control ml-auto mr-5 fieldsFocus" type="date" maxlength = "2" name = "endDateAddress" required>
+                        <span class="pt-2 text-muted font-sm" >End Date</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="appendFields">
+                  <!-- fields added in here-->
+
+                </div>
+              </div>
+            </div>
+            <button class="mt-2 btn btn-secondary addMoreBtn" type="button">ADD MORE</button>
+          </div>
+
+          <div class="p-3">
+            <p>Social Security Number <span class="text-danger font-weight-bold">*</span></p>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <input class="form-control fieldsFocus" name = "socialSecurityNumber" type="password" maxlength="9" pattern = "[0-9]{9}" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3">
+            <p>CDL# <span class="text-danger font-weight-bold">*</span></p>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <input class="form-control fieldsFocus"  name = "cdl" type="number" maxlength="20" required> 
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3">
+            <p>Have you ever been denied a license, permit, or privilege to operate a motor vehicle?
+              <span class="text-danger font-weight-bold">*</span>
+            </p>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div>
+                  <input class="fieldsFocusRadio" type="radio" name="deniedPermit" id="yesDenied" required>
+                  <label for="yesDenied">
+                    Yes
+                  </label>
+                </div>
+                <div>
+                  <input class="fieldsFocusRadio" type="radio" name="deniedPermit" id="noDenied" required>
+                  <label for="noDenied">
+                    No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3">
+            <p>Have you ever had any license, permit, or privilege to operate ever suspended or revoked?
+              <span class="text-danger font-weight-bold">*</span>
+            </p>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <div>
+                  <input class="fieldsFocusRadio" type="radio" name="suspended" id="yesSuspended" required>
+                  <label for="yesSuspended">
+                    Yes
+                  </label>
+                </div>
+                <div>
+                  <input class="fieldsFocusRadio" type="radio" name="suspended" id="noSuspended" required>
+                  <label for="noSuspended">
+                    No
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3">
+            <p>If you answered yes to either question, please explain below </p>
+            <div class="row">
+              <div class="col-12">
+                <textarea class="form-control fieldsFocus" placeholder="Type here..." rows="4" name="licenseDismissalExplanation"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex pt-4 mb-3 border-top">
+            <a href="generalInfo.html" class="ml-4 btn mr-lg-5 px-4 backButton">Back</a>
+            <button type="submit" class="ml-auto btn btn-primary mr-lg-5 mr-2 px-4 nextButton">Next</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

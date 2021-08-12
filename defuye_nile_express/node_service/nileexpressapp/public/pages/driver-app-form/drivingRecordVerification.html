@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Nile Express</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="d-flex">
+    <img class="ml-auto mr-auto mt-2" height="120px" width="227px" src="logo.jpeg" />
+  </div>
+  <div class="d-flex mt-2 mb-4">
+    <div class="col-lg-7 col-10 ml-auto mr-auto bg-white">
+      <div class="pb-5 mt-4 border-bottom">
+        <h3 class="ml-4">Driving Record Verification</h3>
+      </div>
+      <div class="container mt-3 mb-4">
+        <form class="form-group">
+
+          <!-- <div class="pb-2 mt-4 border-bottom">
+            <h5>Driver's Statement for Previous Employers</h5>
+          </div> -->
+          <p class="ml-4">The following section will ask for information to verify your driving record. This information may also be verfied by your Motor Carrier</p>
+          <p class="mt-5 p-3">Each motor carrier shall at least once every (12) months, require each driver it employs to prepare and furnish it with a list of all violations of motor vehicle traffic laws and ordinances (other than parking violations) of which the dirver has been convicted, or on account of which he/she has forfeited bond or collateral during the preceding 12 months (§391.27) </p>
+  
+          <div class="p-3 ">
+            <p>Accident Record from past three years: </p>
+            <div class="row">
+              <div class="col-12">
+                <table class="table table-bordered table-responsive">
+                  <thead>
+                    <tr>
+                      <th class="thBackgroudColor">Date</th>
+                      <th class="thBackgroudColor">Offense</th>
+                      <th class="thBackgroudColor">Location (State)</th>
+                      <th class="thBackgroudColor">Type of Vehicle Operated</th>
+                    </tr>
+                  </thead>
+                  <tbody class= "addRow">
+                    <tr>
+                      <td contenteditable="true" class="tableFields"><input type= "date"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      
+                    </tr>
+                    <tr>
+                      <td contenteditable="true" class="tableFields"><input type= "date"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      
+                    </tr>
+                    <tr>
+                      <td contenteditable="true" class="tableFields"><input type= "date"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      
+                    </tr>
+                    <tr>
+                      <td contenteditable="true" class="tableFields"><input type= "date"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type= "text"/></td>
+                      
+                    </tr>
+
+                  </tbody>
+                </table>
+                <button class="btn"><i class="fas fa-plus-circle"></i> Add row</button>
+                <button class="btn"><i class="fas fa-minus-circle"></i> Delete row</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3">
+            <p>I certify that the following is the true and complete list of traffic violations (other than parking violations) for which I have been convicted or forfeited bond or collateral during past 12 months. <span class="text-danger font-weight-bold">*</span></p>
+            <input  type="checkbox" name="felony" id="yesFelony" required>      
+          </div>
+
+
+
+
+        <div class="pb-2 mt-4 border-bottom">
+          <h5>Driver's Statement for Motor Carrier</h5>
+        </div>
+        <p class="mt-5">Description of Motor Carrier Requirements.... </p>
+        <p class="mt-5">I hereby specifically authorize you to release the following information to Nile Express LLC and
+          their agents
+          for the purposes of investigation as required by §391.23 and §391.25 of the Federal Motor Carrier Safety
+          Regulations. You are hereby released from any and all liability which may result from furnishing such
+          information. </p>
+
+          <div class="p-3">
+            <p>Applicant's Full Name: <span class="text-danger font-weight-bold">*</span></p>
+            <div class="row">
+              <div class="col-lg-6 col-12">
+                <input class="form-control fieldsFocus" type="text" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex pt-4 mb-3 border-top">
+            <a href="driverVerification.html" class="ml-4 btn mr-lg-5 px-4 backButton">Back</a>
+            <button type="submit" class="ml-auto btn btn-primary mr-lg-5 mr-2 px-4 nextButton">Next</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</body>
+<script>
+  function readfiles(files) {
+    for (var i = 0; i < files.length; i++) {
+      // document.getElementById('fileDragName').value = files[i].name
+      // document.getElementById('fileDragSize').value = files[i].size
+      // document.getElementById('fileDragType').value = files[i].type
+      //change to file name
+      reader = new FileReader();
+      reader.onload = function (event) {
+        var imageSrc = event.target.result;
+        var elem = document.createElement("img");
+        elem.setAttribute("src", imageSrc);
+        elem.setAttribute("width", "100px");
+        elem.setAttribute("class", "imageClass");
+        document.getElementById("imageAppendDiv").classList.add('imagesDivScroll')
+        document.getElementById("imageAppendDiv").appendChild(elem);
+        document.getElementById("browseImage").classList.add("d-none");
+      }
+      reader.readAsDataURL(files[i]);
+    }
+  }
+  var holder = document.getElementById('holder');
+  holder.ondragover = function () { this.className = 'hover'; return false; };
+  holder.ondragend = function () { this.className = ''; return false; };
+  holder.ondrop = function (e) {
+    this.className = '';
+    e.preventDefault();
+    readfiles(e.dataTransfer.files);
+  }
+</script>
+
+</html>

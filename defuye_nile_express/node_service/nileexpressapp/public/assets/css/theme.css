@@ -40,6 +40,7 @@ Copyright 2018 Webinning
 /* ==========================================================================
    Gradients for backgrounds
    ========================================================================== */
+@import url("https://use.typekit.net/dpq4bnc.css");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -21621,6 +21622,12 @@ div.code-toolbar > .toolbar .toolbar-item span:hover {
  * Define you custome style here.
  * It will be merged with the default style.
  */
+.main-title {
+  font-family: aileron, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .container.right {
   margin-left: 60px;
 }

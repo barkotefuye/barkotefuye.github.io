@@ -6,6 +6,14 @@
  * Define you custome style here.
  * It will be merged with the default style.
  */
+
+ @import url("https://use.typekit.net/dpq4bnc.css");
+.main-title{
+  font-family: aileron, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 .container.right{
   margin-left: 60px;
 }
