@@ -64,32 +64,11 @@
                   </thead>
                   <tbody class= "addDriverLicense">
                     <tr>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                    </tr>
-                    <tr>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                    </tr>
-                    <tr>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                    </tr>
-                    <tr>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
+                      <td contenteditable="true" class="tableFields"><input type = "text"/> </td>
+                      <td contenteditable="true" class="tableFields"><input type = "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type = "text"/></td>
+                      <td contenteditable="true" class="tableFields"><input type = "text" maxlength = "2"/></td>
+                      <td contenteditable="true" class="tableFields"><input type = "text"/></td>
                     </tr>
 
                   </tbody>
@@ -101,7 +80,7 @@
           </div>
 
           <div class="p-3 ">
-            <p>Driver License's from Past Three Years Prior to Application Date <i>(complete for each license/ permit, including current driver's license)</i>: </p>
+            <p>Driver License's from Past Three Years Prior to Application Date <i>(complete for each license/ permit, including current driver's license)</i>: <span class="text-danger font-weight-bold">*</span></p>
             <div class="row">
               <div class="col-12">
                 <table class="table table-bordered table-responsive">
@@ -116,32 +95,18 @@
                   </thead>
                   <tbody class= "addDriverLicense">
                     <tr>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                    </tr>
-                    <tr>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                    </tr>
-                    <tr>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                    </tr>
-                    <tr>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
-                      <td contenteditable="true" class="tableFields"></td>
+                      <td contenteditable="true" class="tableFields"><input type = "text" maxlength = "2" required/></td> 
+                      <td contenteditable="true" class="tableFields"><input type = "text" maxlength ="15" required/></td>
+                      <td contenteditable="true" class="tableFields"><input type ="date" name = "expirationdate" required/></td>
+                      <td contenteditable="true" class="tableFields">
+                        <select class="form-control fieldsFocus"  name= "jobPosition" required>
+                        <option disabled>Please Select</option>
+                        <option>A </option>
+                        <option>B </option>
+                        <option>C</option>
+                      </select>
+                    </td>
+                      <td contenteditable="true" class="tableFields"><input type = "text" maxlength ="15"/></td>
                     </tr>
 
                   </tbody>
@@ -367,25 +332,55 @@
             </div>
           </div>
 
-          <div class="pb-2 mt-4 border-bottom">
-            <h5>Driver License Requirements</h5>
-          </div>
-          <p class="mt-5"> Driver License Requirements ... </p>
-
-          <p class="mt-5">I hereby specifically authorize you to release the following information to Nile Express LLC and
-            their agents
-            for the purposes of investigation as required by §391.23 and §391.25 of the Federal Motor Carrier Safety
-            Regulations. You are hereby released from any and all liability which may result from furnishing such
-            information. </p>
-  
-            <div class="p-3">
-              <p>Applicant's Full Name: <span class="text-danger font-weight-bold">*</span></p>
-              <div class="row">
-                <div class="col-lg-6 col-12">
-                  <input class="form-control fieldsFocus" type="text" required>
+          <div class="p-3">
+            <strong>Please submit copy of your Social Security Card: </strong>
+            <div class="row mt-2">
+              <div class="col-12">
+                <input id="filetriger" class="d-none" onchange="readfiles(files)" type="file" multiple>
+                <!-- <input id="fileDragName"><input id="fileDragSize"><input
+                    id="fileDragType"><input id="fileDragData"> -->
+                <div id="holder">
+                  <div id="imageAppendDiv" class=""></div>
+                  <div id="browseImage">
+                    <div class="d-flex mt-4">
+                      <img height="50px" width="50px" class="ml-auto mr-auto" src="../../assets/img/uploadSvg.svg">
+                    </div>
+                    <div class="d-flex">
+                      <strong class="ml-auto mr-auto">Browse Files</strong>
+                    </div>
+                    <div class="d-flex">
+                      <span class="ml-auto mr-auto text-muted">Drag and drop files here</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="p-3">
+            <strong>Please submit copy of your Medical Card: </strong>
+            <div class="row mt-2">
+              <div class="col-12">
+                <input id="filetriger" class="d-none" onchange="readfiles(files)" type="file" multiple>
+                <!-- <input id="fileDragName"><input id="fileDragSize"><input
+                    id="fileDragType"><input id="fileDragData"> -->
+                <div id="holder">
+                  <div id="imageAppendDiv" class=""></div>
+                  <div id="browseImage">
+                    <div class="d-flex mt-4">
+                      <img height="50px" width="50px" class="ml-auto mr-auto" src="../../assets/img/uploadSvg.svg">
+                    </div>
+                    <div class="d-flex">
+                      <strong class="ml-auto mr-auto">Browse Files</strong>
+                    </div>
+                    <div class="d-flex">
+                      <span class="ml-auto mr-auto text-muted">Drag and drop files here</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           
 
           <div class="d-flex pt-4 mb-3 border-top">

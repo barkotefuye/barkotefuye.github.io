@@ -19,13 +19,16 @@ app.get('/general-info', (req, res) => {
 })
 
 // using axios create api endpoint
+app.get('/driver-experience', (req, res) => {
+  res.sendFile('public/pages/driver-app-form/driverExperience.html', {root: __dirname });
+})
 
 app.post('/driver-experience', (req, res) => {
   res.sendFile('public/pages/driver-app-form/driverExperience.html', {root: __dirname });
 })
 
-app.post('/driver-vertification', (req, res) => {
-  res.sendFile('public/pages/driver-app-form/driverVertification.html', {root: __dirname });
+app.post('/driver-verification', (req, res) => {
+  res.sendFile('public/pages/driver-app-form/driverVerification.html', {root: __dirname });
 })
 
 app.post('/employment-history', (req, res) => {
@@ -33,7 +36,19 @@ app.post('/employment-history', (req, res) => {
 })
 // app.post('/driver-app', appHandler); // handles form response
 
-app.get('/coming-soon', (req, res) => {
+app.post('/on-duty', (req, res) => {
+  res.sendFile('public/pages/driver-app-form/onDutyHoursStatement.html', {root: __dirname });
+})
+
+app.post('/safety-performance', (req, res) => {
+  res.sendFile('public/pages/driver-app-form/safetyPerformance.html', {root: __dirname });
+})
+
+app.post('/additional-comments', (req, res) => {
+  res.sendFile('public/pages/driver-app-form/additionalComments.html', {root: __dirname });
+})
+
+app.post('/coming-soon', (req, res) => {
   res.sendFile('public/pages/coming-soon.html', {root: __dirname });
 })
 

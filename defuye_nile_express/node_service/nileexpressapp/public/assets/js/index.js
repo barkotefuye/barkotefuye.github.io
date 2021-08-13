@@ -167,7 +167,16 @@ var address = '<div class="p-3">\n'+
 '                  </div>';
 
 
+function autotab(current,to)
+{
+    if (current.getAttribute && current.value.length==current.getAttribute("maxlength")) 
+    {
+        to.focus() 
+    }
+}
+
 $(document).ready(function () {
+    
   $(".fieldsFocus").on("focus", function () {
     $(this).parent().parent().parent().addClass("backgroudFocused")
   })
@@ -181,7 +190,6 @@ $(document).ready(function () {
   //       }
   //   })
 
-
   $(".fieldsFocusRadio").on("focus", function () {
     $(this).parent().parent().parent().parent().addClass("backgroudFocused")
   })
@@ -192,7 +200,6 @@ $(document).ready(function () {
     $('.appendFields').append(address);
     return (false)
   })
-
 
   $('.addExperience').on("click", function(){
     $(experience).appendTo('.experienceSection')
@@ -217,3 +224,4 @@ $(document).ready(function () {
     $('#filetriger').click()
   })
 });
+

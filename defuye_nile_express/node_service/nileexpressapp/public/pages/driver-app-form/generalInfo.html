@@ -32,6 +32,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../../assets/css/index.css">
   <script src="../../assets/js/index.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <!-- <script>
+    function autotab(current,to)
+    {
+        if (current.getAttribute && current.value.length==current.getAttribute("maxlength")) 
+        {
+            to.focus() 
+        }
+    }
+  </script> -->
 </head>
 
 <body>
@@ -45,7 +55,7 @@
         <p class="ml-4">Please fill out contact information</p>
       </div>
       <div class="container mt-3 mb-4">
-        <form class="form-group form-check" id = "generalInfoForm" action="/driver-experience" method ="POST">  <!--  FORM START   -->
+        <form class="form-group form-check" id = "generalInfoForm" name = "generalInfo" action="/driver-verification" method ="POST" >  <!--  FORM START   -->
 
           <div class="p-3">
             <p>Full Name <span class="text-danger font-weight-bold">*</span></p>
@@ -73,7 +83,7 @@
             <div class="row mt-3">
               <div class="col-12">
                 <input class="form-control fieldsFocus" type="text" name = "currentAddress2">
-                <span class="pt-2 text-muted font-sm">Street Address Line 2</span>
+                <span class="pt-2 text-muted font-sm"><i>Street Address Line 2</i></span>
               </div>
             </div>
             <div class="row mt-3">
@@ -103,17 +113,17 @@
             <div class="row">
               <div class="col-lg-2 col-12">
                 <!-- <input class="form-control fieldsFocus" placeholder="(000) 000-0000" type="text"  maxlength = "12" required> -->
-                   <input class="form-control fieldsFocus" name="phoneAreaCode" type="tel" pattern="[0-9]{3}" placeholder="(555)" aria-label="3-digit area code" size="2" maxlength="3"/>
+                   <input class="form-control fieldsFocus" name="phoneAreaCode" type="tel" pattern="[0-9]{3}" placeholder="555" aria-label="3-digit area code" size="2" maxlength="3" oninput="autotab(this, document.generalInfo.phoneFirstThree)"/>
               </div>
               <div class="col-lg-2 col-12">
-                    <input class="form-control fieldsFocus" name="phoneFirstThree" type="tel" pattern="[0-9]{3}" placeholder="555" aria-label="3-digit prefix" size="2" maxlength="3"/> 
+                    <input class="form-control fieldsFocus" name="phoneFirstThree" type="tel" pattern="[0-9]{3}" placeholder="555" aria-label="3-digit prefix" size="2" maxlength="3" oninput="autotab(this, document.generalInfo.phoneLastFour)"/> 
               </div>-
               <div class="col-lg-2 col-12">
                     <input class="form-control fieldsFocus" name="phoneLastFour" type="tel" pattern="[0-9]{4}" placeholder="5555" aria-label="4-digit number" size="3" maxlength="4"/>
               </div> 
                  
               </div>
-            </div>
+          </div>
 
           <div class="p-3">
             <p>E-mail <span class="text-danger font-weight-bold">*</span></p>
@@ -132,6 +142,7 @@
                 <select class="form-control fieldsFocus"  name= "jobPosition" required>
                   <option disabled>Please Select</option>
                   <option>Driver </option>
+                  <option>Owner Operator </option>
                   <option>Other (Please specify...)</option>
                 </select>
               </div>
@@ -272,7 +283,7 @@
           <br>
           <br>
           <div class="d-flex pt-4 mb-3 border-top">
-            <a href="index.html" class="ml-4 btn mr-lg-5 px-4 backButton">Back</a>
+            <a href="/driver-app" class="ml-4 btn mr-lg-5 px-4 backButton">Back</a>
             <button type="submit" class="ml-auto btn btn-primary mr-lg-5 mr-2 px-4 nextButtonGeneral">Next</button>
           </div>
 
